@@ -16,7 +16,7 @@ RUN apk del .tmp-build-deps
 # make /app directory on vm, cd into it and copy local ./app directory into vm /app
 RUN mkdir /app
 WORKDIR /app
-COPY ./app /app
+COPY ./ /app
 
 # create new user named user.  -D means user gets no home directory
 RUN adduser -D user
